@@ -8,6 +8,7 @@
     <PackageProjectUrl>https://github.com/cototal/ApprovedEmailAccess</PackageProjectUrl>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/cototal/ApprovedEmailAccess</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
