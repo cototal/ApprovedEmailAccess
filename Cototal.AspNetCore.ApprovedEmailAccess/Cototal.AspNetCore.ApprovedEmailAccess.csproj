@@ -9,6 +9,7 @@
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/cototal/ApprovedEmailAccess</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

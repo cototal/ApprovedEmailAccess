@@ -7,11 +7,13 @@
     {
         /// <param name="adminEmails">List of emails you want to allow access</param>
         /// <param name="separator">Separator used between emails in the list</param>
-        public VerifyAdminEmailOptions(string adminEmails, char separator = ';')
+        public VerifyAdminEmailOptions(string adminEmails, char separator = ';', string providerName = "Google")
         {
             AdminEmails = adminEmails.Split(separator);
+            ProviderName = providerName;
         }
 
         public string[] AdminEmails { get; set; }
+        public string ProviderName { get; set; }
     }
 }

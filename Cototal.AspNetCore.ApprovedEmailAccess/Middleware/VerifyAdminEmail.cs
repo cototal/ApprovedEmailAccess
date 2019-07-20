@@ -12,12 +12,12 @@ namespace Cototal.AspNetCore.ApprovedEmailAccess.Middleware
     public class VerifyAdminEmail
     {
         private readonly RequestDelegate _next;
-        private readonly string[] _validEmails;
+        private readonly IVerifyAdminEmailOptions _options;
 
         public VerifyAdminEmail(RequestDelegate next, IVerifyAdminEmailOptions options)
         {
             _next = next;
-            _validEmails = options.AdminEmails;
+            _options = options;
         }
 
         public async Task InvokeAsync(HttpContext context)
@@ -42,7 +42,7 @@ namespace Cototal.AspNetCore.ApprovedEmailAccess.Middleware
                 await _next(context);
                 return;
             }
-            if (_validEmails.Count() == 0 || !_validEmails.Contains(email.Value) || email.Issuer != "Google")
+            if (_options.AdminEmails.Count() == 0 || !_options.AdminEmails.Contains(email.Value) || email.Issuer != _options.ProviderName)
             {
                 context.Response.StatusCode = 401;
                 await context.Response.WriteAsync("Unauthorized");
