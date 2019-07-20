@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Shaun T Martin</Authors>
+    <Company>Cototal</Company>
+    <Description>A simple library that allows you to specify a list of Emails from an exteranl service provider that are authorized to access protected pages.</Description>
+    <PackageProjectUrl>https://github.com/cototal/ApprovedEmailAccess</PackageProjectUrl>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/cototal/ApprovedEmailAccess</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
